@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zone d'intervention · Vitrelis, lavage de vitres à Grenoble</title>
+<meta name="description" content="Vitrelis, basé à Varces, intervient dans tout le sud grenoblois et l'agglomération de Grenoble : Le Pont-de-Claix, Claix, Vif, Échirolles, Seyssins...">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Vitrelis — On vous laisse voir la différence"></a>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="prestations.html">Prestations</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="zone.html">Zone d'intervention</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="phone" href="tel:+33778560525">☎ 07 78 56 05 25</a>
+      <a class="btn btn-primary" href="contact.html">Devis gratuit</a>
+      <button class="burger" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="sparkle" style="top:20%;right:8%">✦</span>
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Accueil</a> › Zone d'intervention</p>
+    <h1>Basés à Varces, chez vous en quelques minutes</h1>
+    <p class="lead">Sud grenoblois et agglomération de Grenoble. Déplacement inclus dans un rayon de 10 km.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap zone-grid">
+    <div class="reveal">
+      <span class="tag">Communes desservies</span>
+      <h2 class="title">Nous venons jusqu'à vous</h2>
+      <p class="lead">Votre commune n'est pas dans la liste ? Contactez-nous, nous intervenons aussi au-delà avec un petit supplément de déplacement.</p>
+      <div class="towns">
+        <span class="main">Varces-Allières-et-Risset</span><span>Le Pont-de-Claix</span><span>Claix</span><span>Vif</span><span>Saint-Paul-de-Varces</span><span>Seyssins</span><span>Échirolles</span><span>Seyssinet-Pariset</span><span>Grenoble</span><span>Eybens</span><span>Champagnier</span><span>Jarrie</span><span>Fontaine</span><span>Saint-Martin-d'Hères</span><span>Sassenage</span><span>Meylan</span>
+      </div>
+      <div class="trajet" id="trajet">
+        <p class="trajet-vide">👆 Cliquez sur votre commune pour voir la distance, le temps de trajet et le coût du déplacement.</p>
+      </div>
+      <div class="extras" style="margin-top:28px">
+        <b>Déplacement :</b>
+        <span>0 à 10 km <em>inclus</em></span>
+        <span>10 à 25 km <em>+5 €</em></span>
+        <span>Au-delà de 25 km <em>+10 €</em></span>
+      </div>
+    </div>
+    <div class="map reveal">
+      <div id="carte" role="img" aria-label="Carte satellite de la zone d'intervention autour de Varces"></div>
+      <div class="legende">
+        <span><i class="l1"></i>0 à 10 km · inclus</span>
+        <span><i class="l2"></i>10 à 25 km · +5 €</span>
+        <span><i class="l3"></i>Vitrelis · Varces</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Vous êtes dans la zone ?</h2>
+      <p>Demandez votre devis gratuit, on s'occupe du reste.</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-light" href="contact.html">Demander un devis</a>
+      <a class="btn btn-outline-light" href="tel:+33778560525">☎ Appeler</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="logo.png" alt="Vitrelis"></div>
+        <p>Lavage de vitres professionnel pour les particuliers et les commerces du bassin grenoblois.</p>
+      </div>
+      <div><h4>Prestations</h4><ul><li><a href="prestations.html">Fenêtres &amp; baies</a></li><li><a href="prestations.html">Vérandas</a></li><li><a href="prestations.html">Vitrines de commerces</a></li><li><a href="prestations.html">Vitres en hauteur</a></li></ul></div>
+      <div><h4>Infos</h4><ul><li><a href="tarifs.html">Tarifs</a></li><li><a href="zone.html">Zone d'intervention</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33778560525">07 78 56 05 25</a></li><li><a href="mailto:vitrelis.pro@gmail.com">vitrelis.pro@gmail.com</a></li><li><a href="contact.html">Demander un devis</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Vitrelis · Micro-entreprise · <a href="mentions-legales.html">Mentions légales</a></span><span>On vous laisse voir la différence.</span></div>
+  </div>
+</footer>
+
+<a class="btn btn-primary float-call" href="tel:+33778560525">☎ Appeler</a>
+<script src="script.js"></script>
+</body>
+</html>
