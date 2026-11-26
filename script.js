@@ -145,7 +145,7 @@ if (document.getElementById('simNet')) {
   calc();
 }
 
-// Formulaire de devis (page Contact) : envoi direct à vitrelis.pro@gmail.com (service FormSubmit),
+// Formulaire de devis (page Contact) : envoi direct à vitrelis.pro@gmail.com (service Web3Forms),
 // sans ouvrir la messagerie du visiteur.
 const devis = document.getElementById('devis');
 if (devis) {
@@ -161,25 +161,24 @@ if (devis) {
     const stop = new AbortController();
     const minuteur = setTimeout(() => stop.abort(), 12000); // on n'attend pas plus de 12 secondes
     try {
-      const rep = await fetch('https://formsubmit.co/ajax/vitrelis.pro@gmail.com', {
+      const rep = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         signal: stop.signal,
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          _subject: 'Nouvelle demande de devis Vitrelis',
-          _template: 'table',
-          _captcha: 'false',
-          _replyto: f.get('email'),
+          access_key: '5b1432f2-e42d-43bb-9c6c-3a4c122c5631', // clé publique liée à la boîte Vitrelis
+          subject: 'Nouvelle demande de devis Vitrelis',
+          from_name: 'Site Vitrelis',
+          email: f.get('email'), // sert aussi d'adresse de réponse
           'Nom': f.get('nom'),
           'Téléphone': f.get('tel'),
-          'E-mail': f.get('email'),
           'Vous êtes': f.get('type'),
           'Commune': f.get('ville'),
           'Besoin': f.get('message')
         })
       });
       const data = await rep.json().catch(() => ({}));
-      if (!rep.ok || String(data.success) === 'false') throw new Error(data.message || rep.status);
+      if (!rep.ok || data.success !== true) throw new Error(data.message || rep.status);
       ok.style.display = 'block';
       devis.reset();
     } catch (x) {
